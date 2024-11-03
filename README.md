@@ -1,70 +1,153 @@
-# Getting Started with Create React App
+# Blog Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React-based blog application that allows users to view, create, edit, and delete blog posts. It also includes basic authentication for users to register, log in, and log out. The application is structured with multiple reusable components, a simple state management setup, and basic styling.
+
+## Table of Contents
+
+- [Blog Application](#blog-application)
+  - [Table of Contents](#table-of-contents)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+    - [Running the Application](#running-the-application)
+  - [Project Structure](#project-structure)
+    - [Explanation](#explanation)
+  - [Available Scripts](#available-scripts)
+  - [Components](#components)
+    - [Main Components](#main-components)
+    - [Authentication Components](#authentication-components)
+    - [User Management](#user-management)
+  - [Utilities](#utilities)
+  - [Configuration](#configuration)
+
+## Getting Started
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- Node.js (>=14.x.x)
+- npm (>=6.x.x)
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/HK-Mikrokraadid/blog.git
+   ```
+
+2. Navigate into the project directory:
+
+   ```bash
+   cd blog
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+### Running the Application
+
+To start the development server, run:
+
+```bash
+npm start
+```
+
+This will start the application on `http://localhost:3000` by default.
+
+## Project Structure
+
+```plaintext
+blog/
+├── public/
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+├── src/
+│   ├── components/
+│   │   ├── About.js
+│   │   ├── AddPost.js
+│   │   ├── AuthContext.js
+│   │   ├── Comments.js
+│   │   ├── Home.js
+│   │   ├── Login.js
+│   │   ├── Logout.js
+│   │   ├── NavBar.js
+│   │   ├── NotFound.js
+│   │   ├── Post.js
+│   │   ├── PostPage.js
+│   │   ├── Posts.js
+│   │   ├── RegisterUser.js
+│   │   ├── User.js
+│   │   └── Users.js
+│   ├── data/
+│   │   └── samplePosts.js
+│   ├── utils/
+│   │   └── formatDate.js
+│   ├── App.js
+│   ├── App.css
+│   ├── config.js
+│   ├── index.js
+│   ├── index.css
+│   └── reportWebVitals.js
+├── .gitignore
+├── package-lock.json
+└── package.json
+```
+
+### Explanation
+
+- **public**: Static files accessible by the browser.
+- **src**: Contains all the source code, including components, configuration, and utility functions.
+- **components**: Individual React components that form different parts of the application UI.
+- **data**: Includes sample data for posts.
+- **utils**: Contains helper functions like date formatting.
+- **config.js**: Stores configuration settings.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+- `npm start`: Starts the development server.
+- `npm test`: Runs tests in watch mode.
+- `npm run build`: Builds the app for production to the `build` folder.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Components
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Main Components
 
-### `npm test`
+- **App.js**: The main application component, setting up routes and global settings.
+- **NavBar.js**: The navigation bar displayed on every page.
+- **Home.js**: The home page showing a list of posts.
+- **About.js**: Information about the blog or author.
+- **Posts.js**: Displays a list of posts.
+- **Post.js**: Displays individual post details.
+- **PostPage.js**: Page to view a specific post with comments.
+- **AddPost.js**: Form for creating a new post.
+- **Comments.js**: Displays comments related to a post.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Authentication Components
 
-### `npm run build`
+- **Login.js**: Allows users to log into the application.
+- **RegisterUser.js**: Allows new users to register.
+- **Logout.js**: Logs users out of the application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### User Management
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **User.js**: Displays individual user information.
+- **Users.js**: Lists all users in the application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Utilities
 
-### `npm run eject`
+- **formatDate.js**: Helper function to format dates for display.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Configuration
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The **config.js** file holds environment-specific configurations such as API endpoints. Modify this file as needed for different deployment environments.
