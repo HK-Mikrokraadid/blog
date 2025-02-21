@@ -19,6 +19,7 @@ This is a React-based blog application that allows users to view, create, edit, 
     - [User Management](#user-management)
   - [Utilities](#utilities)
   - [Configuration](#configuration)
+  - [Muudatused](#muudatused)
 
 ## Getting Started
 
@@ -151,3 +152,5 @@ In the project directory, you can run:
 ## Configuration
 
 The **config.js** file holds environment-specific configurations such as API endpoints. Modify this file as needed for different deployment environments.
+
+## Muudatused
